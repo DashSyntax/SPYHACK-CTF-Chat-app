@@ -277,7 +277,8 @@ button:hover {
 }
 
 .message .text {
-  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 .composer {
