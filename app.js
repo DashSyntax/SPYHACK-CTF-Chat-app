@@ -9,6 +9,7 @@ const composerForm = document.getElementById('composer');
 const messageInput = document.getElementById('message-input');
 const userBadge = document.getElementById('user-badge');
 const loginError = document.getElementById('login-error');
+const replyDelayMs = 3000;
 
 const state = {
   user: sessionStorage.getItem('signal-relay-user') || '',
@@ -136,14 +137,17 @@ async function requestAutoReply(text, chat) {
   const endpoint = document.documentElement.dataset.replyApi.replace(/\/+$/, '');
 
   try {
-    const response = await fetch(`${endpoint}/reply`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${state.token}`,
-      },
-      body: JSON.stringify({ message: text, chatId: chat.id }),
-    });
+    const [response] = await Promise.all([
+      fetch(`${endpoint}/reply`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${state.token}`,
+        },
+        body: JSON.stringify({ message: text, chatId: chat.id }),
+      }),
+      new Promise((resolve) => setTimeout(resolve, replyDelayMs)),
+    ]);
     if (response.status === 401) {
       state.user = '';
       state.token = '';
