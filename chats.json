@@ -1,0 +1,56 @@
+[
+	{
+		"id": "crew",
+		"title": "Crew",
+		"participants": ["Tripple T", "Billy_Brack", "Cheese"],
+		"messages": [
+			{
+				"sender": "Tripple T",
+				"time": "2026-10-05T09:05:00Z",
+				"text": "Did anyone take my headphones?"
+			},
+			{
+				"sender": "Billy_Brack",
+				"time": "2026-10-05T09:06:00Z",
+				"text": "They were beside the kettle."
+			},
+			{
+				"sender": "Cheese",
+				"time": "2026-10-05T09:07:00Z",
+				"text": "That's where I left the other stuff."
+			},
+			{
+				"sender": "Tripple T",
+				"time": "2026-10-05T09:08:00Z",
+				"text": "Send the code in this chat when you've got it."
+			}
+		]
+	},
+	{
+		"id": "security",
+		"title": "Security",
+		"participants": ["Tripple T", "Billy_Brack", "Boss"],
+		"messages": [
+			{
+				"sender": "Tripple T",
+				"time": "2026-10-05T10:14:00Z",
+				"text": "The garage shutter is sticking again."
+			},
+			{
+				"sender": "Boss",
+				"time": "2026-10-05T10:16:00Z",
+				"text": "I oiled the track this morning."
+			},
+			{
+				"sender": "Billy_Brack",
+				"time": "2026-10-05T10:18:00Z",
+				"text": "I'll check the side door before I leave."
+			},
+			{
+				"sender": "Boss",
+				"time": "2026-10-05T10:19:00Z",
+				"text": "Thanks. Park the car by the blue unit when you get back."
+			}
+		]
+	}
+]

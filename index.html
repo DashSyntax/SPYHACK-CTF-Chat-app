@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-reply-api="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signal Relay</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="login-screen" class="screen active">
+      <div class="login-card">
+        <div class="brand-block">
+          <span class="brand-dot"></span>
+          <h1>Signal Relay</h1>
+        </div>
+        <p class="tagline">Internal secure comms</p>
+
+        <form id="login-form">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" placeholder="Billy_Brack" autocomplete="username" required />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter password" autocomplete="current-password" required />
+
+          <button type="submit">Log in</button>
+          <p id="login-error" class="login-error" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div id="app" class="app hidden">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div>
+            <p class="section-label">Workspace</p>
+            <h2>Chats</h2>
+          </div>
+          <button id="logout-btn" class="ghost-btn">Logout</button>
+        </div>
+
+        <div id="chat-list" class="chat-list"></div>
+      </aside>
+
+      <main class="chat-panel">
+        <header class="chat-header">
+          <div>
+            <p class="section-label">Current chat</p>
+            <h2 id="chat-title">Select a chat</h2>
+          </div>
+          <div class="user-badge" id="user-badge">Guest</div>
+        </header>
+
+        <div id="message-thread" class="message-thread"></div>
+
+        <form id="composer" class="composer">
+          <input
+            id="message-input"
+            type="text"
+            placeholder="Type a message..."
+            maxlength="280"
+            required
+          />
+          <button type="submit">Send</button>
+        </form>
+      </main>
+    </div>
+
+  <footer class="site-disclaimer">This page is a work of fiction created for SpyHack 2026.</footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
